@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web-app:
+    build:
+      context: ./frontend
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./frontend/app:/usr/src/app
+    stdin_open: true
+    tty: true
